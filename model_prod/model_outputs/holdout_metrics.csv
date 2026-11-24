@@ -1,0 +1,2 @@
+model,cv_mae_f,holdout_rows,holdout_mae_f,holdout_rmse_f,holdout_r2
+XGBoost,1.8555192188831917,1924,2.522144960241495,2.8546424376915094,-3.886745160929756

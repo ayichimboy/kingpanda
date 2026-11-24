@@ -5,11 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "catboost>=1.2.10",
     "jupyterlab>=4.6.6",
+    "lightgbm>=4.7.0",
     "matplotlib>=3.11.2",
     "numpy>=2.4.6",
     "panda>=0.3.1",
     "pathlib>=1.0.1",
+    "pipeline>=0.1.0",
     "scikit-learn>=1.9.1",
     "seaborn>=0.13.2",
+    "xgboost>=3.2.0",
 ]

@@ -1,0 +1,4 @@
+model,cv_mae,best_params
+XGBoost,1.8555192188831917,"{'model__subsample': 1.0, 'model__reg_lambda': 5, 'model__n_estimators': 200, 'model__max_depth': 2, 'model__learning_rate': 0.1, 'model__colsample_bytree': 0.9}"
+Random Forest,1.9547297797815897,"{'model__n_estimators': 100, 'model__min_samples_leaf': 1, 'model__max_features': 1.0, 'model__max_depth': 20}"
+Ridge,2.672261157384933,{'model__alpha': 1000}
