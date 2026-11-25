@@ -222,5 +222,4 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 teachpandas/teachDocker
-.agents/
-.agents/
+/.agents/
