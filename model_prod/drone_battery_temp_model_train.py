@@ -240,7 +240,6 @@ def pipeline_orchestration(data, output_dir="model_outputs"):
     })
     holdout["residual_f"] = holdout["actual_f"] - holdout["predicted_f"]
     holdout.index.name = "holdout_row"
-
     metrics = pd.DataFrame([{
         "model": model_name,
         "cv_mae_f": winner["cv_mae"],
@@ -253,15 +252,12 @@ def pipeline_orchestration(data, output_dir="model_outputs"):
     metrics.to_csv(output_dir / "holdout_metrics.csv", index=False)
     holdout.to_csv(output_dir / "holdout_predictions.csv")
     export_holdout_plots(holdout, model_name, output_dir)
-
     return comparison, metrics
-
 
 def main():
     """ Orchestrate Pipeline to run code """
     print("Initializing Model Development ....")
     cv_comparison, holdout_metrics = pipeline_orchestration(data)
-
     print(cv_comparison.to_string(index=False))
     print(holdout_metrics.to_string(index=False))
     print("Model Development and Storage Complete")
