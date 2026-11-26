@@ -223,10 +223,9 @@ __marimo__/
 .streamlit/secrets.toml
 teachpandas/teachDocker
 /.agents/
+# Generated drone label images
 /explore_labels/drone_flight_flystate.png
 /explore_labels/drone_flight_Go_Home.png
 /explore_labels/drone_flight_P-GPS.png
 /explore_labels/drone_flight_Sport.png
 /explore_labels/drone_flight_Waypoint.png
-explore_labels/drone_flight_P-GPS.png
-explore_labels/drone_flight_flystate.png
