@@ -223,3 +223,8 @@ __marimo__/
 .streamlit/secrets.toml
 teachpandas/teachDocker
 /.agents/
+/explore_labels/drone_flght_flystate.png        
+/explore_labels/drone_flight_Go_Home.png
+/explore_labels/drone_flight_Sport.png
+/explore_labels/drone_flight_Waypoint.png
+/explore_labels/drone_fligh_P-GPS.png

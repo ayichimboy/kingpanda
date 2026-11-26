@@ -1,6 +1,7 @@
 import pandas as pd       
 import matplotlib.pyplot as plt   
-from pathlib import Path         
+from pathlib import Path   
+from datetime import datetime    
 
 def validation_process(file_path):
     """ Validate work process and data path """
@@ -49,6 +50,7 @@ def plot_save_file(dfx, dir="saved_plots"):
     """ Plot and save png file of drone fly state"""
     save_dir = Path(__file__).resolve().parent / "output_dir"
     save_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S-%f")
 
     for flystate, rows in dfx.groupby("flycState", sort=False):
         fig, ax = plt.subplots(1, 2, figsize=(11, 4), layout="constrained")
@@ -70,7 +72,7 @@ def plot_save_file(dfx, dir="saved_plots"):
         ax[1].ticklabel_format(style="plain", useOffset=False)
 
         fig.suptitle(f"Drone Flight Mode: {flystate} (n={len(rows):,})")
-        fig.savefig(save_dir / f"drone_flight_{flystate}.png", dpi=200)
+        fig.savefig(save_dir / f"drone_flight_{timestamp}_{flystate}.png", dpi=200)
         plt.close(fig)
 
     return save_dir.resolve()
